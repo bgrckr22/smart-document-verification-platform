@@ -1,0 +1,45 @@
+# Local configuration
+.env
+.env.*
+!.env.example
+.local-data/
+.local-logs/
+
+# .NET
+**/bin/
+**/obj/
+*.user
+*.suo
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+htmlcov/
+.coverage
+
+# Node
+node_modules/
+dist/
+*.tsbuildinfo
+npm-debug.log*
+.npm-cache/
+.tools/
+.docker-runtime/
+.docker-userdata/
+
+# Uploaded and generated application data
+uploads/
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
