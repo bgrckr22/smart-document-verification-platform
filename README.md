@@ -1,5 +1,7 @@
 # Smart Document Verification Platform
 
+[![CI](https://github.com/bgrckr22/smart-document-verification-platform/actions/workflows/ci.yml/badge.svg)](https://github.com/bgrckr22/smart-document-verification-platform/actions/workflows/ci.yml)
+
 ## Overview
 
 Smart Document Verification Platform turns a document photo into a cleaner image and reports whether the capture is usable. A React dashboard sends JPEG or PNG images to an ASP.NET Core API, which validates the upload and calls a separate FastAPI/OpenCV service. The service looks for a four-corner page boundary, corrects perspective when possible, and measures blur and image quality. PostgreSQL stores the processing history and results, while original and processed images are kept on local disk. This is an image-processing demo, not a document-authenticity or identity-verification system.
