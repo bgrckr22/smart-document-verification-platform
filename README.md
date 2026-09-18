@@ -92,9 +92,17 @@ The API calls FastAPI's internal POST /analyze endpoint; FastAPI also exposes GE
 
 ## Running Locally
 
-Use Windows PowerShell from the repository root. Docker is not required. Prerequisites are the .NET 8 SDK, Python 3.12, and Node.js 20.19.x or 22.12+ with npm (as required by the installed Vite version). PostgreSQL 16 can be installed already, or the included script can download a checksum-verified portable copy into this project.
+Docker is not required. On Windows, install a .NET SDK 8 or newer with the ASP.NET Core 8 runtime, Python 3.12, and Node.js 20.19.x or 22.12+ with npm. The launcher installs PostgreSQL 16 into the project folder when it is not available on PATH; it does not install system-wide software.
 
-### One-time setup
+### Quick start on Windows
+
+1. Download the GitHub ZIP and extract it, or clone the repository.
+2. Double-click [Start-SmartDocumentPlatform.cmd](Start-SmartDocumentPlatform.cmd) in the extracted project folder.
+3. Wait for the first-run setup and three service windows to finish starting. The dashboard opens at http://localhost:5173.
+
+The first run creates a Git-ignored `.env` with a random local database password, installs a checksum-verified portable PostgreSQL copy if needed, and restores Python, .NET, and frontend dependencies. It needs an internet connection. Later launches reuse these files. Keep the three service windows open while using the app. To stop, close those windows and run `.\scripts\Stop-LocalPostgres.ps1` from PowerShell in the project folder. The temporary `S:` project drive, if used for a path with non-ASCII characters, is removed when PostgreSQL stops.
+
+### Manual setup (optional)
 
 ~~~powershell
 Copy-Item .env.example .env
