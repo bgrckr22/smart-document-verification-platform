@@ -1,0 +1,13 @@
+.git
+.github
+.env
+.npm-cache
+**/bin
+**/obj
+**/node_modules
+**/dist
+**/__pycache__
+**/.pytest_cache
+**/.venv
+TestResults
+uploads
